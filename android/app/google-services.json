@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1087809785687",
+    "project_id": "dawraty-edb4c",
+    "storage_bucket": "dawraty-edb4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087809785687:android:1c87f34c56d7400056b812",
+        "android_client_info": {
+          "package_name": "com.dawraty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBN-vgO7oISU48GUyGOdeHbgvVEQ2L8z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

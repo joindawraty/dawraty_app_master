@@ -1,0 +1,190 @@
+diff --git a/node_modules/react-native-video-controls/VideoPlayer.js b/node_modules/react-native-video-controls/VideoPlayer.js
+index 7d36b4b..14906e5 100644
+--- a/node_modules/react-native-video-controls/VideoPlayer.js
++++ b/node_modules/react-native-video-controls/VideoPlayer.js
+@@ -12,8 +12,16 @@ import {
+   Image,
+   View,
+   Text,
++  Pressable
+ } from 'react-native';
++import {
++  Menu,
++  MenuOptions,
++  MenuOption,
++  MenuTrigger,
++} from 'react-native-popup-menu';
+ import padStart from 'lodash/padStart';
++import color from '../../src/components/color';
+ 
+ export default class VideoPlayer extends Component {
+   static defaultProps = {
+@@ -1053,7 +1061,159 @@ export default class VideoPlayer extends Component {
+           <SafeAreaView
+             style={[styles.controls.row, styles.controls.bottomControlGroup]}>
+             {playPauseControl}
++                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
++              <Pressable
++                onPress={() => {
++                  // this.player.ref?.presentFullscreenPlayer?.()
++                  const currentTime = parseInt(this.state.currentTime);
++                  if (currentTime >= 10) {
++                    this.player.ref?.seek?.(currentTime - 10)
++                  }
++                }}
++              >
++                <Image
++                  source={require('../../src/assets/images/ic-replay-10-sec.png')}
++                  style={{
++                    height: 16,
++                    width: 16
++                  }}
++                  resizeMode='cover'
++                />
++              </Pressable>
++              <Pressable
++                onPress={() => {
++                  // this.player.ref?.seek?.(10)
++                  const totalDuration = parseInt(this.state.duration);
++                  const currentTime = parseInt(this.state.currentTime);
++
++                  if (totalDuration - currentTime >= 10) {
++                    this.player.ref?.seek?.(currentTime + 10)
++                  }
++                }}
++                style={{
++                  marginLeft: 16
++                }}
++              >
++                <Image
++                  source={require('../../src/assets/images/ic-forward-10-sec.png')}
++                  style={{
++                    height: 16,
++                    width: 16
++                  }}
++                  resizeMode='cover'
++                />
++              </Pressable>
++            </View>
+             {this.renderTitle()}
++            <Menu>
++            <MenuTrigger text={`${this.state.rate.toFixed(2)}X`} customStyles={{
++              triggerText: {
++                color: color.white,
++                fontWeight: 'bold'
++              }
++            }} />
++            <MenuOptions
++              customStyles={{
++                optionsContainer: {
++                  backgroundColor: 'pink',
++                  width: 70
++                }
++              }}
++            >
++              <MenuOption
++                style={{
++                  height: 40,
++                  alignItems: 'center',
++                  justifyContent: 'center',
++                  borderBottomWidth: 1,
++                  backgroundColor: this.state.rate === 2 ? color.blue : color.white
++                }}
++                customStyles={{
++                  optionText: {
++                    color: this.state.rate === 2 ? color.white : color.blue,
++                  }
++                }}
++                onSelect={() => {
++                  this.setState(prevState => {
++                    return  {
++                      ...prevState,
++                      rate: 2
++                    }
++                  })
++                }}
++                text='2x'
++              />
++              <MenuOption
++                style={{
++                  height: 40,
++                  alignItems: 'center',
++                  justifyContent: 'center',
++                  borderBottomWidth: 1,
++                  backgroundColor: this.state.rate === 1 ? color.blue : color.white
++                }}
++                customStyles={{
++                  optionText: {
++                    color: this.state.rate === 1 ? color.white : color.blue,
++                  }
++                }}
++                onSelect={() => {
++                  this.setState(prevState => {
++                    return  {
++                      ...prevState,
++                      rate: 1
++                    }
++                  })
++                }}
++                text='1x'
++              />
++              <MenuOption
++                style={{
++                  height: 40,
++                  alignItems: 'center',
++                  justifyContent: 'center',
++                  borderBottomWidth: 1,
++                  backgroundColor: this.state.rate === 1.75 ? color.blue : color.white
++                }}
++                customStyles={{
++                  optionText: {
++                    color: this.state.rate === 1.75 ? color.white : color.blue,
++                  }
++                }}
++                onSelect={() => {
++                  this.setState(prevState => {
++                    return  {
++                      ...prevState,
++                      rate: 1.75
++                    }
++                  })
++                }}
++                text='1.75x'
++              />
++              <MenuOption
++                style={{
++                  height: 40,
++                  alignItems: 'center',
++                  justifyContent: 'center',
++                  borderBottomWidth: 1,
++                  backgroundColor: this.state.rate === 1.5 ? color.blue : color.white,
++                }}
++                customStyles={{
++                  optionText: {
++                    color: this.state.rate === 1.5 ? color.white : color.blue,
++                  }
++                }}
++                onSelect={() => {
++                  this.setState(prevState => {
++                    return  {
++                      ...prevState,
++                      rate: 1.5
++                    }
++                  })
++                }}
++                text='1.5x'
++              />
++            </MenuOptions>
++          </Menu>
+             {timerControl}
+           </SafeAreaView>
+         </ImageBackground>
+@@ -1347,7 +1507,7 @@ const styles = {
+     },
+     playPause: {
+       position: 'relative',
+-      width: 80,
++      width: 40,
+       zIndex: 0,
+     },
+     title: {

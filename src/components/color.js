@@ -1,0 +1,15 @@
+export default {
+  blue: '#0b4475',
+  black: '#000000',
+  white: '#ffffff',
+  grey: '#CFCFCF',
+  skyBlue: '#1f97ff',
+  greyNew: '#eeeeee',
+  bottom: '#888',
+  darkGrey: '#808080',
+  red: 'red',
+  purple: '#f4e4fa',
+  themeYellow: '#fffae4',
+  orange: '#ff6e00',
+  green: '#39a103',
+};

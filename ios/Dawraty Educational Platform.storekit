@@ -1,0 +1,115 @@
+{
+  "identifier" : "E704FFB0",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "42.49",
+      "familyShareable" : false,
+      "internalID" : "6476104526",
+      "localizations" : [
+        {
+          "description" : "Arrhythmias lesson for Cardiology",
+          "displayName" : "Arrhythmias",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "21.30",
+      "referenceName" : "Arrhythmias",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "169.0",
+      "familyShareable" : false,
+      "internalID" : "6476036838",
+      "localizations" : [
+        {
+          "description" : "for students of Medicine at Kuwait University",
+          "displayName" : "Cardiology",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "21",
+      "referenceName" : "Cardiology",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "42.49",
+      "familyShareable" : false,
+      "internalID" : "6476104707",
+      "localizations" : [
+        {
+          "description" : "HF for Clinical Medicine and Pathology",
+          "displayName" : "HF Clinical Medicine&Pathology",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "21.31",
+      "referenceName" : "HF for Clinical Medicine and Pathology",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6464328860",
+    "_developerTeamID" : "KZMM7ZL384",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 727299941.00970495,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
