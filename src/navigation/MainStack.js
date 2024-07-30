@@ -33,7 +33,7 @@ import AboutUs from '../Screens/Profile/AboutUs';
 import PrivacyPolicy from '../Screens/Profile/PrivacyPolicy';
 import TermsAndConditions from '../Screens/Profile/TermsAndConditions';
 import FAQ from '../Screens/Profile/FAQ';
-import MyAddresses from '../Screens/Profile/MyAddresses.js';
+import MyAddresses from '../Screens/Profile/MyAddresses';
 
 import {appConstants} from '../constants';
 import RoutePaths from '../util/RoutePaths';
